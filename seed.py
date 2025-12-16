@@ -18,3 +18,21 @@ def create_default_principal():
         db.commit()
 
     db.close()
+
+# from database import SessionLocal
+# from models import User
+# from auth import hash_password
+
+# db = SessionLocal()
+
+# principal = User(
+#     username="Mangal",             
+#     password=hash_password("Mangal9101"),
+#     role="principal"
+# )
+
+# db.add(principal)
+# db.commit()
+# db.close()
+
+# print("Principal added successfully ✅")

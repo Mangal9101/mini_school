@@ -10,6 +10,8 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
 def hash_password(password: str):
+    if len(password.encode("utf-8")) > 72:
+        password = password[:72]
     return pwd_context.hash(password)
 
 
