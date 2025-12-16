@@ -5,4 +5,3 @@ python-jose
 passlib[bcrypt]
 python-multipart
 jinja2
-python-3.11.7
