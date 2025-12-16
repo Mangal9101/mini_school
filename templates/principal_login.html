@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Principal Login | School Management</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1d2671, #c33764);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: #ffffff;
+            padding: 12px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        header button {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .nav-dark {
+            background: #1d2671;
+        }
+
+        .nav-pink {
+            background: #c33764;
+        }
+
+        header button:hover {
+            opacity: 0.85;
+        }
+
+        /* ===== MAIN ===== */
+        .main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-card {
+            width: 320px;
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+        }
+
+        .school-icon {
+            font-size: 40px;
+            margin-bottom: 6px;
+        }
+
+        .login-card h3 {
+            font-size: 20px;
+            color: #1d2671;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .login-card p {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .form-control {
+            font-size: 13px;
+            padding: 6px 10px;
+            border-radius: 8px;
+        }
+
+        .btn-login {
+            background: #1d2671;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            padding: 7px;
+        }
+
+        .btn-login:hover {
+            background: #141a4f;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-size: 13px;
+            color: #555;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div>
+        <button class="nav-dark" onclick="history.back()">⬅ Back</button>
+        <button class="nav-dark" onclick="history.forward()">Next ➡</button>
+    </div>
+    <div>
+        <button class="nav-pink" onclick="location.href='/teacher/login'">Teacher</button>
+        <button class="nav-dark" onclick="location.href='/principal/login'">Principal</button>
+    </div>
+</header>
+
+<!-- MAIN -->
+<div class="main">
+    <div class="login-card">
+
+        <div class="school-icon">🏫</div>
+
+        <h3>Principal Login</h3>
+        <p>Secure access for authorized personnel</p>
+
+        <form method="post" action="/principal/login">
+            <input type="hidden" name="role" value="principal">
+
+            <div class="mb-2 text-start">
+                <label class="form-label small">Username</label>
+                <input class="form-control form-control-sm"
+                       name="username"
+                       placeholder="Username"
+                       required>
+            </div>
+
+            <div class="mb-2 text-start">
+                <label class="form-label small">Password</label>
+                <input class="form-control form-control-sm"
+                       type="password"
+                       name="password"
+                       placeholder="Password"
+                       required>
+            </div>
+
+            <button class="btn btn-login w-100 btn-sm mt-2" style="color:white;">
+    Login
+</button>
+
+        </form>
+
+        <small class="text-muted d-block mt-2">
+            Authorized access only
+        </small>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 School Management System | Message by <strong>Mangal</strong>
+</footer>
+
+</body>
+</html>

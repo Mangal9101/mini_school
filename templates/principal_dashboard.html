@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal Dashboard | School Management</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1d2671, #c33764);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: #ffffff;
+            padding: 12px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        header button {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .nav-dark { background: #1d2671; }
+        .nav-pink { background: #c33764; }
+
+        header button:hover { opacity: 0.85; }
+
+        /* ===== MAIN ===== */
+        .main {
+            flex: 1;
+            padding: 30px 15px;
+        }
+
+        .dashboard-header {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+        }
+
+        .dashboard-header h1 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1d2671;
+        }
+
+        .dashboard-header p {
+            font-size: 13px;
+            color: #666;
+            margin-top: 6px;
+        }
+
+        .dash-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 18px;
+            text-align: center;
+            height: 100%;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .dash-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .dash-icon {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .dash-card h5 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .dash-card p {
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 0;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-size: 13px;
+            color: #555;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.15);
+        }
+
+        a { text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div>
+        <button class="nav-dark" onclick="history.back()">⬅ Back</button>
+        <button class="nav-dark" onclick="history.forward()">Next ➡</button>
+    </div>
+    <div>
+        <button class="nav-pink" onclick="location.href='/teacher/login'">Teacher</button>
+        <button class="nav-dark" onclick="location.href='/principal/dashboard'">Principal</button>
+    </div>
+</header>
+
+<!-- MAIN -->
+<div class="main container">
+
+    <div class="dashboard-header">
+        <h1>Welcome, Principal</h1>
+        <p>Manage your school efficiently from one place</p>
+    </div>
+
+    <div class="row g-3">
+        <div class="col-md-4">
+            <a href="/principal/add-teacher">
+                <div class="dash-card">
+                    <div class="dash-icon text-primary">➕</div>
+                    <h5>Add Teacher</h5>
+                    <p>Register new teacher quickly</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="/principal/teachers">
+                <div class="dash-card">
+                    <div class="dash-icon text-success">👩‍🏫</div>
+                    <h5>Teacher List</h5>
+                    <p>View all teachers</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="/principal/students">
+                <div class="dash-card">
+                    <div class="dash-icon text-warning">🎓</div>
+                    <h5>Student List</h5>
+                    <p>Browse student records</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 School Management System | Message by <strong>Mangal</strong>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

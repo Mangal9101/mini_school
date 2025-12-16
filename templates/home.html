@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>School Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1d2671, #c33764);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: #ffffff;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .nav-left button,
+        .nav-right button {
+            padding: 10px 18px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-left button {
+            background: #1d2671;
+            color: #fff;
+        }
+
+        .nav-left button:hover {
+            background: #141a4f;
+        }
+
+        .teacher-btn {
+            background: #c33764;
+            color: #fff;
+        }
+
+        .principal-btn {
+            background: #1d2671;
+            color: #fff;
+        }
+
+        .teacher-btn:hover {
+            background: #9f2a4e;
+        }
+
+        .principal-btn:hover {
+            background: #141a4f;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: #ffffff;
+            width: 420px;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+
+        h1 {
+            color: #1d2671;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        p {
+            color: #555;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #ffffff;
+            text-align: center;
+            padding: 12px;
+            font-size: 14px;
+            color: #555;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="nav-left">
+        <button onclick="history.back()">⬅ Back</button>
+        <button onclick="history.forward()">Next ➡</button>
+    </div>
+
+    <div class="nav-right">
+        <button class="teacher-btn" onclick="location.href='/teacher/login'">
+            Teacher Login
+        </button>
+        <button class="principal-btn" onclick="location.href='/principal/login'">
+            Principal Login
+        </button>
+    </div>
+</header>
+
+<!-- MAIN -->
+<div class="main">
+    <div class="container">
+        <h1>Welcome to School Management</h1>
+        <p>
+            A smart and secure system to manage teachers, students,  
+            and academic activities efficiently.
+        </p>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 School Management System | Message by <strong>Mangal</strong>
+</footer>
+
+</body>
+</html>
