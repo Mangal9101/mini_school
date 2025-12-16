@@ -4,8 +4,9 @@ from database import Base, engine
 from routers import principal, teacher, auth_routes
 from fastapi.templating import Jinja2Templates
 import os
-from routers.principal import router as principal_router
+from seed import create_default_principal
 Base.metadata.create_all(bind=engine)
+create_default_principal()   
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -24,5 +25,7 @@ app.mount(
     "/static",
     StaticFiles(directory=os.path.join(BASE_DIR, "static")),
     name="static",)
+
+
 
 
