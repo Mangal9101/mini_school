@@ -29,5 +29,3 @@ app.mount(
     name="static",)
 
 
-    Base.metadata.create_all(bind=engine)
-    create_default_principal()
